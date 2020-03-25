@@ -1,0 +1,8 @@
+target 'HTTPRequestTool' do
+platform :ios, '9.0'
+
+# 网络请求类
+pod 'AFNetworking'
+pod 'MBProgressHUD'
+
+end
