@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.source_files  =  "HTTPRequestTool/Http/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   s.public_header_files = "HTTPRequestTool/Http/HttpRequestHeader.h"
-  s.dependency "AFNetworking", "~> 3.2.1"  "MBProgressHUD", "~> 1.1.0"
+  s.dependency "AFNetworking", "~> 3.2.1"  
+  s.dependency "MBProgressHUD", "~> 1.1.0"
 
 end
