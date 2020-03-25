@@ -11,7 +11,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/jiangyongchang126/HTTPRequestTool.git", :tag => "0.0.1" }
   s.source_files  =  "HTTPRequestTool/Http/**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
   s.public_header_files = "HTTPRequestTool/Http/HttpRequestHeader.h"
-  s.dependency "AFNetworking", "~> 3.2.1","MBProgressHUD", "~> 1.1.0"
+  s.dependency "AFNetworking", "~> 3.2.1"  "MBProgressHUD", "~> 1.1.0"
 
 end
