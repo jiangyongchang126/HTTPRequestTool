@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.summary      = "A short description of HTTPRequestTool."
   s.description  = "a HTTPRequestTool repository demo" 
   s.homepage     = "https://github.com/jiangyongchang126/HTTPRequestTool"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "jianggongzi" => "jiang_yongchang@126.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/jiangyongchang126/HTTPRequestTool.git", :tag => "0.0.2" }

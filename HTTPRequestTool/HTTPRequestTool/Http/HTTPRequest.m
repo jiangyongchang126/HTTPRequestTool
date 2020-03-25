@@ -90,9 +90,9 @@
     }
     
     self.notifyBlock = newBlock;
-    @weakify(self);
+//    @weakify(self);
     dispatch_async(dispatch_get_main_queue(), ^{
-        @strongify(self);
+//        @strongify(self);
         [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow  animated:YES];
         hud.detailsLabel.text = ([warnStr length]>0)?warnStr:@"网不好";
@@ -106,10 +106,10 @@
 //        hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageWithImageSimple:[UIImage imageNamed:status?@"Checkmark":@"wrong"] scaledToSize:CGSizeMake(37, 37)]];
         hud.mode = MBProgressHUDModeCustomView;
         [hud hideAnimated:YES afterDelay:duringTime];
-        @weakify(self)
+//        @weakify(self)
         hud.completionBlock = ^{
-            if (weak_self.notifyBlock) {
-                weak_self.notifyBlock(YES);
+            if (self.notifyBlock) {
+                self.notifyBlock(YES);
             }
         };
     });
@@ -135,10 +135,10 @@
         hud.mode = MBProgressHUDModeText;
         hud.animationType = MBProgressHUDAnimationZoom;
         [hud hideAnimated:YES afterDelay:duringTime];
-        @weakify(self)
+//        @weakify(self)
         hud.completionBlock = ^{
-            if (weak_self.notifyBlock) {
-                weak_self.notifyBlock(YES);
+            if (self.notifyBlock) {
+                self.notifyBlock(YES);
             }
         };
     });
@@ -190,10 +190,10 @@
 // 加密方式请求数据
 - (void)postDataSendHttpRequestWithUrlString:(NSString *)urlString withView:(UIView *)superView isJsonStr:(BOOL )isJson AES:(BOOL )isAES isUpdateToken:(BOOL)isUpdateToken WithDic:(NSDictionary *)dic withApiVersion:(NSString*)apiVersion completion:(void (^)(NSDictionary *resultDic))success
 {
-    @weakify(self)
+//    @weakify(self)
     // 进度条必须加到主线程中显示
     dispatch_async(dispatch_get_main_queue(), ^{
-        @strongify(self);
+//        @strongify(self);
         [self removeProgressHUD];
         [self showProgressHUDWithView:superView warnMessage:nil];
     });
@@ -300,7 +300,7 @@
                         }
                     }
                 }
-                @strongify(self)
+//                @strongify(self)
                 if (!error) {
                     
                     [self removeProgressHUD];
