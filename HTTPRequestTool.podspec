@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jiangyongchang126/HTTPRequestTool.git", :tag => "0.0.2" }
   s.source_files  =  "HTTPRequestTool/HTTPRequestTool/Http/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
+  s.frameworks = "Foundation","UIKit"
   s.public_header_files = "HTTPRequestTool/Http/HttpRequestHeader.h"
   s.dependency "AFNetworking", "~> 3.2.1"  
   s.dependency "MBProgressHUD", "~> 1.1.0"
