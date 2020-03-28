@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jiangyongchang126/HTTPRequestTool.git", :tag => "0.0.2" }
   s.requires_arc = true #是否支持ARC
 
-  s.source_files  =  "HTTPRequestTool/Http/**/*.{h,m}"
+  s.source_files  =  "HTTPRequestTool/Http/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   s.frameworks = "Foundation","UIKit"
   # s.public_header_files = "HTTPRequestTool/Http/HttpRequestHeader.h"
